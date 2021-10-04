@@ -1,0 +1,548 @@
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  background: #2ec19c;
+  overflow-x: hidden;
+}
+html{
+  font-size: 64.5%;
+  scroll-behavior: smooth;
+}
+.header{
+  height: 8rem;
+  display: flex;
+  width: 100vw;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: background 0.5s ease-in-out;
+}
+.header.active{
+  box-shadow: 3px 3px 0.7rem rgba(0, 0, 0, 0.4),
+  -3px -3px 0.7rem rgba(225, 225, 225, 0.4),
+  inset 3px 3px 0.7rem rgba(0, 0, 0, 0.4),
+  inset -3px -3px 0.7rem rgba(225, 225, 225, 0.4);
+  background: #2ec19c;
+}
+.logo{
+  width: 10vw;
+  display: grid;
+  place-items: center;
+  height: 8rem;
+  z-index: 100;
+}
+.navLinks{
+  width: 90vw;
+}
+.navLinks ul{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.navLinks ul li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navLinks ul li a{
+  text-decoration: none;
+  margin-left: 0.1rem;
+  font-size: 2rem;
+  color: black;
+}
+.navLinks ul li img{
+  width: 4rem;
+}
+.applied-btn{
+  width: 15vw;
+  z-index: 100;
+}
+.app-btn{
+  display: none;
+}
+.home{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  background: #2ec19c;
+}
+.btn{
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20rem;
+  height: 6rem;
+  font-size: 1.6rem;
+  border-radius: 2rem;
+  border: none;
+  background: #2ec19c;
+  box-shadow: 3px 3px 0.7rem rgba(0,0,0,0.4),
+              -3px -3px 0.7rem rgba(225,225,225,0.4),
+              inset 3px 3px 0.7rem rgba(0,0,0,0.4),
+              inset -3px -3px 0.7rem rgba(225,225,225,0.4);
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover{
+  box-shadow: 3px 3px 0.7rem rgba(0,0,0,0.4),
+              -3px -3px 0.7rem rgba(225,225,225,0.4);
+}
+.homeImg{
+  width: 15rem;
+}
+.firstHome,.secondHome{
+  width: 50%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.firstHome h2{
+  font-size: 3rem;
+  padding: 0 4rem;
+}
+.red{
+  color: red;
+  font-weight: 1000;
+  font-size: 4rem;
+}
+.aboutMe{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  background: #2ec19c;
+}
+.firstAbout,.secondAbout{
+  width: 70%;
+  height: 70%;
+  display: grid;
+  place-items: center;
+}
+.firstAbout{
+  width: 30%;
+}
+.secondAbout{
+  padding: 0 6rem;
+}
+.secondAbout p{
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.socialMedia{
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20rem;
+  height: 15rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.socialMedia svg{
+  width: 5rem;
+  height: 5rem;
+  fill: #0083FF;
+}
+.navTitle{
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+}
+.myservices{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 5rem;
+  padding: 8rem 3rem;
+  background: #2ec19c;
+}
+.boxes{
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #2ec19c;
+  border-radius: 4rem;
+  box-shadow: 3px 3px 0.7rem rgba(0,0,0,0.4),
+              -3px -3px 0.7rem rgba(225,225,225,0.4),
+              inset 3px 3px 0.7rem rgba(0,0,0,0.4),
+              inset -3px -3px 0.7rem rgba(225,225,225,0.4);
+}
+.infoServices{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutServices{
+  width: 100%;
+  height: 50%;
+  display: grid;
+  place-items: center;
+  padding: 0 4rem;
+}
+.aboutServices p{
+  font-size: 1.5rem;
+  color: #fff;
+}
+.infoServices h3{
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 1rem;
+  color: #fff;
+}
+.recentWork{
+  width: 100vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 4rem;
+  position: relative;
+  padding: 7rem 4rem;
+  background: #2ec19c;
+}
+.classBox{
+  position: relative;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border-radius: 3rem;
+  box-shadow: 3px 3px 0.7rem rgba(0, 0, 0, 0.4),
+  -3px -3px 0.7rem rgba(225, 225, 225, 0.4),
+  inset 3px 3px 0.7rem rgba(0, 0, 0, 0.4),
+  inset -3px -3px 0.7rem rgba(225, 225, 225, 0.4);
+}
+.classBox::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.3);
+  width: 100%;
+  height: 100%;
+}
+.classBox:nth-child(2),
+.classBox:nth-child(3),
+.classBox:nth-child(4){
+  margin-top: 5vh;
+}
+.classBox img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.workTitle,.workLabel,.seeProject{
+  z-index: 10;
+  color: white;
+}
+.workTitle{
+  font-size: 4rem;
+  font-weight: 400;
+}
+.workLabel{
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+.seeProject{
+  width: 20rem;
+  height: 5rem;
+  border: 1px solid #6300FF;
+  background: transparent;
+  border-radius: 3rem;
+  margin-top: 3rem;
+  transition: all 0.5s ease-in-out;
+}
+.seeProject:hover{
+  background: #6300FF;
+}
+.applied-btn{
+  display: none;
+}
+/*tab landscape*/
+@media only screen and (min-width: 600px){
+  html{
+    font-size: 50%;
+  }
+  .home{
+    height: 150rem;
+  }
+  .myservices{
+    height: 30vh;
+  }
+  .aboutMe{
+    height: 40vh;
+  }
+  .classBox{
+    height: 20vh;
+  }
+  
+}
+/*tab portrait*/
+@media only screen and (min-width: 768px){
+  html{
+    font-size: 55%;
+  }
+  .home{
+    height: 100vh;
+  }
+  .myservices{
+    height: 100vh;
+  }
+  .aboutMe{
+    height: 100vh;
+  }
+  .classBox{
+    height: 60vh;
+  }
+}
+/*mobile desktop view*/
+@media only screen and (min-width: 980px){
+  html {
+    font-size: 40%;
+  }
+  .home{
+    height: 40vh;
+  }
+  .homeImg{
+    width: 60rem;
+  }
+  .firstHome h2{
+    font-size: 5rem;
+  }
+  .red{
+    font-size: 7rem;
+  }
+  .btn{
+    width: 35rem;
+    height: 10rem;
+    bottom: 10rem;
+    font-size: 3rem;
+  }
+  .navTitle{
+    font-size: 7rem;
+  }
+  .myservices{
+    height: 30vh;
+    align-items: center;
+  }
+  .boxes{
+    height: 18vh;
+  }
+  .aboutMe{
+    height: 40vh;
+  }
+  .classBox{
+    height: 50rem;
+  }
+  .infoServices h3{
+    font-size: 5rem;
+  }
+  .aboutServices p{
+    font-size: 3rem;
+  }
+  .workTitle{
+    font-size: 8rem;
+  }
+  .workLabel{
+    font-size: 2rem;
+  }
+  .seeProject{
+    width: 25rem;
+    height: 7rem;
+  }
+  .firstAbout,.secondAbout{
+    width: 50%;
+  }
+  .secondAbout p{
+    font-size: 5rem;
+  }
+  .socialMedia{
+    width: 40rem;
+  }
+  .socialMedia svg{
+    width: 14rem;
+    height: 14rem;
+  }
+}
+/*Mobile view*/
+@media only screen and (max-width: 480px){
+  html {
+    font-size: 35.5%;
+  }
+  .header{
+    position: fixed;
+    top: 94vh;
+    left: 0;
+    background: #2ec19c;
+    box-shadow: -3px -3px 10px rgba(0,0,0,0.2);
+  }
+  .header.active{
+    box-shadow: -1rem -1rem 4rem rgba(0,0,0,0.2);
+  }
+  .logo{
+    width: 20vw;
+  }
+  .applied-btn{
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .navLinks{
+    position: absolute;
+    width: 100vw;
+    height: 40vh;
+    bottom: -700%;
+    left: 0;
+    background: #2ec19c;
+    transition: bottom 0.5s ease-in-out;
+    box-shadow: -3px -3px 3px rgba(0,0,0,0.2);
+  }
+  .navLinks.active{
+    bottom: 8rem;
+  }
+  .navLinks ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  .navLinks ul li{
+    flex-direction: column;
+  }
+  .navLinks ul li img{
+    width: 6rem;
+    margin-bottom: 1rem;
+  }
+  .navLinks ul li a{
+    font-size: 2rem;
+  }
+  .app-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+  }
+  .app-btn img{
+    width: 6rem;
+    margin-left: 10rem;
+  }
+  .home{
+    height: 80vh;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+  .firstHome,.secondHome{
+    width: 100vw;
+    height: 40%;
+  }
+  .btn{
+    bottom: 7rem;
+    width: 30rem;
+    height: 8rem;
+    font-size: 3rem;
+  }
+  .homeImg{
+    width: 40rem;
+  }
+  .firstHome h2{
+    font-size: 4rem;
+  }
+  .red{
+    font-size: 5rem;
+  }
+  .aboutMe{
+    height: 120vh;
+    flex-direction: column;
+  }
+  .firstAbout,.secondAbout{
+    width: 100%;
+    height: 40%;
+  }
+  .secondAbout p{
+    font-size: 4rem;
+  }
+  .myservices{
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
+  .boxes{
+    margin-top: 4rem;
+  }
+  .recentWork{
+    grid-template-columns: 1fr;
+    padding: 3rem 3rem;
+  }
+  .classBox{
+    height: 30vh;
+    margin-top: 0 !important;
+  }
+  .classBox:nth-child(2){
+    margin-top: 15rem !important;
+  }
+  .navTitle{
+    width: 100vw;
+    display: grid;
+    place-items: center;
+  }
+  .seeProject{
+    height: 8rem;
+    width: 25rem;
+    border-radius: 4rem;
+  }
+  .boxes{
+    height: 40vh;
+  }
+  .infoServices h3{
+    font-size: 4rem;
+  }
+  .aboutServices p{
+    font-size: 3rem;
+  }
+  .workTitle{
+    font-size: 6rem;
+  }
+  .workLabel{
+    font-size: 1.8rem;
+  }
+  .seeProject{
+    margin-top: 5rem;
+  }
+  .socialMedia svg{
+    width: 7rem;
+    height: 7rem;
+    margin-bottom: 3rem;
+  }
+}
