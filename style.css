@@ -173,14 +173,16 @@ html{
   position: relative;
   width: 100vw;
   height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-gap: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   padding: 8rem 3rem;
   background: #2ec19c;
 }
 .boxes{
-  height: 75vh;
+  height: 40vh;
+  padding: 2rem;
+  width: 30vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -208,11 +210,11 @@ html{
   padding: 0 4rem;
 }
 .aboutServices p{
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #fff;
 }
 .infoServices h3{
-  font-size: 2rem;
+  font-size: 5rem;
   font-weight: 400;
   margin: 0 1rem;
   color: #fff;
@@ -292,7 +294,7 @@ html{
   display: none;
 }
 /*tab landscape*/
-@media only screen and (min-width: 600px){
+/* @media only screen and (min-width: 600px){
   html{
     font-size: 50%;
   }
@@ -309,11 +311,11 @@ html{
     height: 20vh;
   }
   
-}
+} */
 /*tab portrait*/
 @media only screen and (min-width: 768px){
   html{
-    font-size: 55%;
+    font-size: 53%;
   }
   .home{
     height: 100vh;
@@ -324,12 +326,15 @@ html{
   .aboutMe{
     height: 100vh;
   }
+  .boxes{
+    height: 70vh;
+  }
   .classBox{
     height: 60vh;
   }
 }
 /*mobile desktop view*/
-@media only screen and (min-width: 980px){
+@media only screen and (width: 980px){
   html {
     font-size: 40%;
   }
@@ -398,7 +403,7 @@ html{
   }
 }
 /*Mobile view*/
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 770px){
   html {
     font-size: 35.5%;
   }
@@ -495,11 +500,12 @@ html{
     font-size: 4rem;
   }
   .myservices{
-    grid-template-columns: 1fr;
+    flex-direction: column;
     height: 100vh;
   }
   .boxes{
     margin-top: 4rem;
+    width: 80vw;
   }
   .recentWork{
     grid-template-columns: 1fr;
@@ -523,10 +529,10 @@ html{
     border-radius: 4rem;
   }
   .boxes{
-    height: 40vh;
+    height: 70vh;
   }
   .infoServices h3{
-    font-size: 4rem;
+    font-size: 8rem;
   }
   .aboutServices p{
     font-size: 3rem;
